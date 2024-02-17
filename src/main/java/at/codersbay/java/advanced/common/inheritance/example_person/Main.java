@@ -1,5 +1,8 @@
 package at.codersbay.java.advanced.common.inheritance.example_person;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String args[]) {
@@ -23,6 +26,19 @@ public class Main {
         professor.setFirstName("Martin");
         professor.setLastName("Berger");
         professor.setDegree("PhD");
+
+        Course mathematik = new Course();
+        mathematik.titel = "Mathematik für Beginner";
+        mathematik.tutor = hans;
+        mathematik.teacher = professor;
+
+        List<Student> students = new LinkedList<>();
+        students.add(maximillia);
+
+        mathematik.students = students;
+
+        mathematik.ausgabe();
+
 
     }
 }

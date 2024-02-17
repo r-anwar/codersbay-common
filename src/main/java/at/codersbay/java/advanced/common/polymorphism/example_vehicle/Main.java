@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
         Bicycle bicycle = new Bicycle();
-        bicycle.honk();;
+        bicycle.honk();
 
         Car car = new Car();
-        car.honk();;
+        car.honk();
 
         Truck truck = new Truck();
         truck.honk();

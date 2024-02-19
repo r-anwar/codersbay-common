@@ -21,4 +21,15 @@ public class Bank {
     public void getKontostand(Bankkonto konto) {
         System.out.println(konto.getKontostand());
     }
+
+    public void ueberweisen(double betrag, Bankkonto sender, Bankkonto empfaenger) {
+
+        if(betrag > 0 && betrag <= sender.getKontostand()) {
+            double kontostandSender = sender.getKontostand() - betrag;
+            sender.setKontostand(kontostandSender);
+
+            double kontostandEmpfaenger = empfaenger.getKontostand() + betrag;
+            empfaenger.setKontostand(kontostandEmpfaenger);
+        }
+    }
 }

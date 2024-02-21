@@ -56,4 +56,15 @@ package at.codersbay.java.advanced.common.exercises.book;
  * 
  */
 public class Main {
+
+    public static void main(String[] args) {
+        Book book = new Book("Reza Anwar", "Java Advanced", 200, true);
+
+        book.setRef("ABCD1234");
+        book.borrow();
+        book.borrow();
+
+        book.printDetails();
+
+    }
 }

@@ -1,7 +1,7 @@
 package at.codersbay.java.advanced.common.inheritance.example_person;
 
 
-
+import java.awt.*;
 import java.util.List;
 
 public class Course {
@@ -15,13 +15,30 @@ public class Course {
     Professor teacher;
 
     public void ausgabe() {
-        // Titel vom Kurs
 
-        // Titel, Vorname & Nachname vom Professor ausgeben.
+        System.out.println("Titel: " + titel);
 
-        // Vornamen und Nachnamen und die Matrikelnummer vom Tutor ausgeben
+        if(tutor != null) {
+            System.out.println("Tutor: " + tutor.getFirstName());
+            System.out.println("Tutor: " + tutor.getLastName());
+            System.out.println("Tutor: " + tutor.getStudentNumber());
+            System.out.println("Tutor: " + tutor.getCourseToTeach());
+        }
 
-        // Anzahl der StudentInnen
-        // Vorname, Nachname, Matrikel der StudentInnen mittels Schleife ausgeben.
+        if(teacher != null) {
+            System.out.println("Teacher: " + teacher.getFirstName());
+            System.out.println("Teacher: " + teacher.getLastName());
+            System.out.println("Teacher: " + teacher.getDegree());
+        }
+
+        if (students != null) {
+            System.out.println("Anzahl der StudentInnen: " + students.size());
+
+            for (Student student : students) {
+                System.out.println("StudentIn: " + student.getFirstName());
+                System.out.println("StudentIn: " + student.getLastName());
+                System.out.println("StudentIn: " + student.getStudentNumber());
+            }
+        }
     }
 }

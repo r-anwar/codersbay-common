@@ -5,7 +5,14 @@ public class Main {
     public static void main(String[] arguments) {
 
         Animal myAnimal = new Animal();
-        myAnimal.age = 10;
+
+        myAnimal.setAge(10);
+        int age = myAnimal.getAge();
+
+
+
+
+
 
         myAnimal.run("myAnimal");
         myAnimal.ausgabe();

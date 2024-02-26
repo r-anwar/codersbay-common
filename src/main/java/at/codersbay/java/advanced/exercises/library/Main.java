@@ -8,11 +8,12 @@ package at.codersbay.java.advanced.exercises.library;
  * mal ausgeliehen werden.
  *
  * Ein Buch hat unter anderen(!) folgende Attribute (Titel, ISBN, Autor-Objekt)
- * Ein Autor besteht aus folgenden Attributen (Vorname, Nachname)
+ * Ein Autor besteht aus folgenden Attributen (Vorname, Nachname, Liste von Büchern)
  *
  *
  * Erstellen Sie mindestens 5 Bücher, mindestens 2 Bücher sollen denselben Autor haben. Suchen Sie nach mindestens
- * 2 Büchern, leihen Sie mindestens 2 Bücher aus und geben Sie diese auch wieder zurück.
+ * 2 Büchern, leihen Sie mindestens 2 Bücher aus, versuchen Sie ein ausgeliehenes Buch auszuleihen und geben Sie diese
+ * auch wieder zurück.
  *
  */
 public class Main {

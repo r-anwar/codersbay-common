@@ -1,5 +1,8 @@
 package at.codersbay.java.advanced.exercises.library;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Erstelle ein Buchverwaltungssystem.
  * Das Buchverwaltungssystem soll eine Liste von Bücher halten, des Weiteren soll
@@ -17,6 +20,30 @@ package at.codersbay.java.advanced.exercises.library;
  *
  */
 public class Main {
+
+
+    public static void main(String[] args) {
+        // do data input, like:
+        BookManagementSystem system = new BookManagementSystem();
+
+        Book siddhartha = new Book("Siddhartha", "ISBN1234567890", null);
+        Book steppenWolf = new Book("Der Steppenwolf", "ISBN09876543221", null);
+
+        List<Book> hesseBooks = new LinkedList();
+        hesseBooks.add(siddhartha);
+        hesseBooks.add(steppenWolf);
+
+        Author hesse = new Author("Hermann", "Hesse", hesseBooks);
+
+        List<Book> systemBooks = system.getBooks();
+        systemBooks.addAll(hesseBooks);
+
+        List<Book> found = system.search("Steppenwolf", null, null, null);
+
+        System.out.println("Searched for 'Steppenwolf', found: " + found.size() + " books.");
+
+
+    }
 
 
 }

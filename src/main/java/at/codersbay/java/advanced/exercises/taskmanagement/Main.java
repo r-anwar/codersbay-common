@@ -18,16 +18,16 @@ public class Main {
         TaskManagement taskManagement = new TaskManagement();
 
 
-        Task task1 = new Task(1, "Mein Erster Task", "Lorem Ipsum", false);
+        Task task1 = new Task(1, "Mein Erster Task", "Lorem Ipsum");
         taskManagement.addTask(task1);
 
-        Task task2 = new Task(2, "Mein Zweiter Task", "Lorem Ipsum", false);
+        Task task2 = new Task(2, "Mein Zweiter Task", "Lorem Ipsum");
         taskManagement.addTask(task2);
 
-        Task task3 = new Task(3, "Mein Dritter Task", "Lorem Ipsum", false);
+        Task task3 = new Task(3, "Mein Dritter Task", "Lorem Ipsum");
         taskManagement.addTask(task3);
 
-        Task task4 = new Task(4, "Mein Vierter Task", "Lorem Ipsum", false);
+        Task task4 = new Task(4, "Mein Vierter Task", "Lorem Ipsum");
         taskManagement.addTask(task4);
 
         taskManagement.finishTask(task1);

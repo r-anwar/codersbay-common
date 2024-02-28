@@ -42,10 +42,28 @@ public class Main {
 
         List<Book> found = system.search("", "", "", "Hesse");
 
-
-
         System.out.println("Searched for 'Steppenwolf', found: " + found.size() + " books.");
 
+
+        if(system.borrow(siddhartha)) {
+            System.out.println("Das Buch " + siddhartha.getTitle() + " ist nun ausgeliehen.");
+        } else {
+            System.out.println("Das Buch " + siddhartha.getTitle() + " ist bereits ausgeliehen.");
+        }
+
+        if(system.borrow(siddhartha)) {
+            System.out.println("Das Buch " + siddhartha.getTitle() + " ist nun ausgeliehen.");
+        } else {
+            System.out.println("Das Buch " + siddhartha.getTitle() + " ist bereits ausgeliehen.");
+        }
+
+        system.returnBook(siddhartha);
+
+        if(system.borrow(siddhartha)) {
+            System.out.println("Das Buch " + siddhartha.getTitle() + " ist nun ausgeliehen.");
+        } else {
+            System.out.println("Das Buch " + siddhartha.getTitle() + " ist bereits ausgeliehen.");
+        }
     }
 
 

@@ -34,14 +34,17 @@ public class Main {
         hesseBooks.add(steppenWolf);
 
         Author hesse = new Author("Hermann", "Hesse", hesseBooks);
+        siddhartha.setAuthor(hesse);
+        steppenWolf.setAuthor(hesse);
 
         List<Book> systemBooks = system.getBooks();
         systemBooks.addAll(hesseBooks);
 
-        List<Book> found = system.search("Steppenwolf", null, null, null);
+        List<Book> found = system.search("", "", "", "Hesse");
+
+
 
         System.out.println("Searched for 'Steppenwolf', found: " + found.size() + " books.");
-
 
     }
 

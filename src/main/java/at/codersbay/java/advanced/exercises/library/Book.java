@@ -4,8 +4,8 @@ public class Book {
 
     private String title;
     private String ISBN;
-
     private Author author;
+    private boolean borrowed;
 
     public Book(String title, String ISBN, Author author) {
         this.title = title;
@@ -35,5 +35,13 @@ public class Book {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public boolean isBorrowed() {
+        return borrowed;
+    }
+
+    public void setBorrowed(boolean borrowed) {
+        this.borrowed = borrowed;
     }
 }

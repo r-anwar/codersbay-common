@@ -1,12 +1,12 @@
 package at.codersbay.java.advanced.exercises.library;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Author {
 
     private String firstName;
     private String lastName;
-
     private List<Book> books;
 
     public Author(String firstName, String lastName, List<Book> books) {

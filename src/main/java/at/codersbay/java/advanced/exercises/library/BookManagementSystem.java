@@ -2,7 +2,6 @@ package at.codersbay.java.advanced.exercises.library;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Objects;
 
 public class BookManagementSystem {
 
@@ -37,6 +36,7 @@ public class BookManagementSystem {
     }
 
     public List<Book> search(String title, String ISBN, String authorFirstName, String authorLastName) {
+
         List<Book> result = new LinkedList<>();
 
         if (this.books.size() == 0) {
@@ -80,9 +80,10 @@ public class BookManagementSystem {
                 continue;
             }
 
-            if (book.getTitle().contains(title) && book.getAuthor() != null
-                    && book.getAuthor().getFirstName().contains(authorFirstName)
-                    && book.getAuthor().getLastName().contains(authorLastName)) {
+            if (book.getTitle().toLowerCase().contains(title.toLowerCase())
+                    && book.getAuthor() != null
+                    && book.getAuthor().getFirstName().toLowerCase().contains(authorFirstName.toLowerCase())
+                    && book.getAuthor().getLastName().toLowerCase().contains(authorLastName.toLowerCase())) {
                 result.add(book);
             }
         }

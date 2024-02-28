@@ -23,6 +23,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+
         // do data input, like:
         BookManagementSystem system = new BookManagementSystem();
 
@@ -40,9 +41,9 @@ public class Main {
         List<Book> systemBooks = system.getBooks();
         systemBooks.addAll(hesseBooks);
 
-        List<Book> found = system.search("", "", "", "Hesse");
+        List<Book> found = system.search("", "ISBN1234567890", "Albert", "Hesse");
 
-        System.out.println("Searched for 'Steppenwolf', found: " + found.size() + " books.");
+        System.out.println("Search, found: " + found.size() + " books.");
 
 
         if(system.borrow(siddhartha)) {

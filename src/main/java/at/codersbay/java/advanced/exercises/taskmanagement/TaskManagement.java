@@ -5,13 +5,6 @@ import java.util.List;
 
 public class TaskManagement {
 
-    /*
-     * Das Taskverwaltungssystem hat eine Methode die einen Task der Taskliste hinzufügt.
-     * Das Taskverwaltungssystem hat eine Methode die anhand der ID ein Task aus der Taskliste entfernt.
-     * Das Taskverwaltungssystem hat eine Methode die ein Task abgeschliesst.
-     * Das Taskverwaltungssystem hat eine Methode die alle Tasks vom Taskverwaltungssystem anzeigt.
-     */
-
     List<Task> tasks = new LinkedList<>();
 
     public TaskManagement() {

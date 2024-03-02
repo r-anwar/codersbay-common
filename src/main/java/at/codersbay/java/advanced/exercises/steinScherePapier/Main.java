@@ -22,20 +22,23 @@ public class Main {
         PAPIER
     }
 
+
     public static void main(String[] args) {
         // Spielrunde starten
-        spielRunde(benutzerWahl());
+        Wahl meineWahl = meineWahl();
+
+        spielRunde(meineWahl);
     }
 
     // Methode zum Einlesen der Wahl des Benutzers
-    private static Wahl benutzerWahl() {
+    private static Wahl meineWahl() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Bitte gib deine Wahl ein (Stein, Schere, Papier):");
         String eingabe = scanner.nextLine().toUpperCase();
 
         if(!eingabe.equals(Wahl.PAPIER.name()) && !eingabe.equals(Wahl.SCHERE.name())
                 && !eingabe.equals(Wahl.STEIN.name())) {
-            return benutzerWahl();
+            return meineWahl();
         }
         return Wahl.valueOf(eingabe);
     }
@@ -43,6 +46,8 @@ public class Main {
     // Methode zum Spielen einer Runde
     private static void spielRunde(Wahl benutzerWahl) {
         Random random = new Random();
+
+
         Wahl computerWahl = Wahl.values()[random.nextInt(Wahl.values().length)];
 
         System.out.println("Du hast " + benutzerWahl + " gewählt.");

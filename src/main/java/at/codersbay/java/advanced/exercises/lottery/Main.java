@@ -44,10 +44,8 @@ public class Main {
 
         int[] lotteryNumbers = new int[6];
         for (int i = 0; i < lotteryNumbers.length; i++) {
-            lotteryNumbers[i] = getLotteryNumbers(lotteryNumbers);
+            lotteryNumbers[i] = getLotteryNumber(lotteryNumbers);
         }
-        Arrays.sort(lotteryNumbers);
-
 
         List<Integer> matchedNumbers = new LinkedList<>();
         int correctNumbers = 0;
@@ -61,20 +59,21 @@ public class Main {
             }
         }
 
+        Arrays.sort(lotteryNumbers);
         System.out.println("Die gezogenen Zahlen lauten: ");
         for(int lotteryNumber: lotteryNumbers) {
             System.out.print(lotteryNumber + " ");
         }
 
-        System.out.println("\nSie haben folgende " + correctNumbers + " Nummern richtig.");
+        System.out.println("\nSie haben folgende Nummern richtig.");
 
         for (int matchedNumber : matchedNumbers) {
-            System.out.println(matchedNumber);
+            System.out.print(matchedNumber + " ");
 
         }
     }
 
-    public static int getLotteryNumbers(int[] lotteryNumbers) {
+    public static int getLotteryNumber(int[] lotteryNumbers) {
 
         Random random = new Random();
 
@@ -82,7 +81,7 @@ public class Main {
 
         for (int lotteryNumber : lotteryNumbers) {
             if (randomNumber == lotteryNumber) {
-                randomNumber = getLotteryNumbers(lotteryNumbers);
+                randomNumber = getLotteryNumber(lotteryNumbers);
             }
         }
 

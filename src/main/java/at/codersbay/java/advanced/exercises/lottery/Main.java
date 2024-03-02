@@ -75,6 +75,11 @@ public class Main {
         }
     }
 
+    /**
+     * Rekursiver Methodenaufruf studieren.
+     * @param lotteryNumbers
+     * @return
+     */
     public static int getLotteryNumber(int[] lotteryNumbers) {
 
         Random random = new Random();
@@ -90,6 +95,12 @@ public class Main {
         return randomNumber;
     }
 
+    public void helloWorld(int count) {
+        if(count < 10) {
+            helloWorld(count++);
+        }
+    }
+
 
     public static int[] readInput(Scanner scanner) {
         int[] returnValue = new int[6];
@@ -103,8 +114,6 @@ public class Main {
                 System.out.println("Bitte geben Sie genau 6 Zahlen komma separiert ein.");
                 readInput(scanner);
             }
-
-            returnValue = new int[6];
 
             for (int i = 0; i < userNumbers.length; i++) {
                 int parsedNumber = Integer.parseInt(userNumbers[i]);
